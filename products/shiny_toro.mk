@@ -7,6 +7,9 @@ export AOSP_INTENDED_DEVICE=toro
 # Inherit common Shiny product configuration.
 $(call inherit-product, vendor/shiny/products/shiny_common.mk)
 
+# Inherit common Shiny phone configuration.
+$(call inherit-product, vendor/shiny/products/shiny_common_phone.mk)
+
 # Inherit Shiny tuna device configuration.
 $(call inherit-product, vendor/shiny/products/shiny_tuna.mk)
 

@@ -39,7 +39,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
     ro.com.google.clientidbase=android-google \
     ro.com.android.wifi-watchlist=GoogleGuest \
-    ro.error.receiver.system.apps=com.google.android.feedback \
+    ro.error.receiver.system.apps=com.google.android.gms \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.google.mcc_fallback=262
     
@@ -49,8 +49,6 @@ PRODUCT_COPY_FILES += \
 	$(COMMON_PROPS_ROOT)/priv-app/ConfigUpdater.odex:system/priv-app/ConfigUpdater.odex \
 	$(COMMON_PROPS_ROOT)/priv-app/GoogleBackupTransport.apk:system/priv-app/GoogleBackupTransport.apk \
 	$(COMMON_PROPS_ROOT)/priv-app/GoogleBackupTransport.odex:system/priv-app/GoogleBackupTransport.odex \
-	$(COMMON_PROPS_ROOT)/priv-app/GoogleDialer.apk:system/priv-app/GoogleDialer.apk \
-	$(COMMON_PROPS_ROOT)/priv-app/GoogleDialer.odex:system/priv-app/GoogleDialer.odex \
 	$(COMMON_PROPS_ROOT)/priv-app/GoogleFeedback.apk:system/priv-app/GoogleFeedback.apk \
 	$(COMMON_PROPS_ROOT)/priv-app/GoogleFeedback.odex:system/priv-app/GoogleFeedback.odex \
 	$(COMMON_PROPS_ROOT)/priv-app/GoogleLoginService.apk:system/priv-app/GoogleLoginService.apk \
