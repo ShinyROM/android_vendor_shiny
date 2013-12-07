@@ -40,8 +40,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=android-google \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.error.receiver.system.apps=com.google.android.gms \
-    ro.setupwizard.enterprise_mode=1 \
-    ro.com.google.mcc_fallback=262
+    ro.setupwizard.enterprise_mode=1
     
 # Private system apps
 PRODUCT_COPY_FILES += \
@@ -91,7 +90,6 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PROPS_ROOT)/app/Gmail2.apk:system/app/Gmail2.apk \
     $(COMMON_PROPS_ROOT)/app/Gmail2.odex:system/app/Gmail2.odex \
     $(COMMON_PROPS_ROOT)/app/GoogleCamera.apk:system/app/GoogleCamera.apk \
-    $(COMMON_PROPS_ROOT)/app/GoogleCamera.odex:system/app/GoogleCamera.odex \
     $(COMMON_PROPS_ROOT)/app/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
     $(COMMON_PROPS_ROOT)/app/GoogleContactsSyncAdapter.odex:system/app/GoogleContactsSyncAdapter.odex \
     $(COMMON_PROPS_ROOT)/app/GoogleEars.apk:system/app/GoogleEars.apk \
@@ -127,6 +125,7 @@ endif
     
 # Common etc permissions and props
 PRODUCT_COPY_FILES += \
+    $(COMMON_PROPS_ROOT)/etc/permissions/com.google.android.camera2.xml:system/etc/permissions/com.google.android.camera2.xml \
     $(COMMON_PROPS_ROOT)/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
     $(COMMON_PROPS_ROOT)/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml \
     $(COMMON_PROPS_ROOT)/etc/permissions/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml \
