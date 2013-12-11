@@ -90,6 +90,7 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PROPS_ROOT)/app/Gmail2.apk:system/app/Gmail2.apk \
     $(COMMON_PROPS_ROOT)/app/Gmail2.odex:system/app/Gmail2.odex \
     $(COMMON_PROPS_ROOT)/app/GoogleCamera.apk:system/app/GoogleCamera.apk \
+    $(COMMON_PROPS_ROOT)/app/GoogleCamera.odex:system/app/GoogleCamera.odex \
     $(COMMON_PROPS_ROOT)/app/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
     $(COMMON_PROPS_ROOT)/app/GoogleContactsSyncAdapter.odex:system/app/GoogleContactsSyncAdapter.odex \
     $(COMMON_PROPS_ROOT)/app/GoogleEars.apk:system/app/GoogleEars.apk \
@@ -135,6 +136,7 @@ PRODUCT_COPY_FILES += \
 # Common framework
 PRODUCT_COPY_FILES += \
 	$(COMMON_PROPS_ROOT)/framework/com.google.android.camera2.jar:system/framework/com.google.android.camera2.jar \
+	$(COMMON_PROPS_ROOT)/framework/com.google.android.camera2.odex:system/framework/com.google.android.camera2.odex \
 	$(COMMON_PROPS_ROOT)/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
     $(COMMON_PROPS_ROOT)/framework/com.google.android.media.effects.jar:system/framework/com.google.android.media.effects.jar \
     $(COMMON_PROPS_ROOT)/framework/com.google.widevine.software.drm.jar:system/framework/com.google.widevine.software.drm.jar
