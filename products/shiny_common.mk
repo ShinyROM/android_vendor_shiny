@@ -79,8 +79,8 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PROPS_ROOT)/app/Drive.apk:system/app/Drive.apk \
     $(COMMON_PROPS_ROOT)/app/EmailGoogle.apk:system/app/EmailGoogle.apk \
     $(COMMON_PROPS_ROOT)/app/EmailGoogle.odex:system/app/EmailGoogle.odex \
-    $(COMMON_PROPS_ROOT)/app/Exchange2Google.apk:system/app/Exhcnage2Google.apk \
-    $(COMMON_PROPS_ROOT)/app/Exchange2Google.odex:system/app/Exhcnage2Google.odex \
+    $(COMMON_PROPS_ROOT)/app/Exchange2Google.apk:system/app/Exchange2Google.apk \
+    $(COMMON_PROPS_ROOT)/app/Exchange2Google.odex:system/app/Exchange2Google.odex \
     $(COMMON_PROPS_ROOT)/app/FaceLock.apk:system/app/FaceLock.apk \
     $(COMMON_PROPS_ROOT)/app/FaceLock.odex:system/app/FaceLock.odex \
     $(COMMON_PROPS_ROOT)/app/GalleryGoogle.apk:system/app/GalleryGoogle.apk \
