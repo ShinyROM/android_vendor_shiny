@@ -7,5 +7,4 @@ PRODUCT_BRAND := shiny
 PRODUCT_DEVICE := generic_phone
 
 # Private system apps
-PRODUCT_COPY_FILES += \
-	$(COMMON_PHONE_PROPS_ROOT)/priv-app/GoogleDialer.apk:system/priv-app/GoogleDialer.apk
+
