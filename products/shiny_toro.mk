@@ -29,9 +29,9 @@ PRODUCT_MANUFACTURER := samsung
 # Override some build.prop settings for toro
 PRODUCT_BUILD_PROP_OVERRIDES += \
 	PRODUCT_NAME=mysid \
-	BUILD_NUMBER=920375 \
-	BUILD_FINGERPRINT="google/mysid/toro:4.4/KRT16S/920375:user/release-keys" \
-	PRIVATE_BUILD_DESC="mysid-user 4.4 KRT16S 920375 release-keys"
+	BUILD_NUMBER=937116 \
+	BUILD_FINGERPRINT="google/mysid/toro:4.4.2/KOT49H/937116:user/release-keys" \
+	PRIVATE_BUILD_DESC="mysid-user 4.4.2 KOT49H 937116 release-keys"
 	
 PRODUCT_PROPERTY_OVERRIDES += \
     camera.flash_off=0
