@@ -3,14 +3,6 @@ GROUPER_PROPS_ROOT=vendor/shiny/proprietary/grouper
 
 # Current method to pass device name to installer
 export AOSP_INTENDED_DEVICE=grouper
-
-# Setup sounds configuration
-# TODO: We need to decide whether or not all devices are going to carry
-# the same sounds, or stick with their specific ones
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.config.ringtone=Girtab.ogg \
-	ro.config.notification_sound=Tejat.ogg \
-	ro.config.alarm_alert=Cesium.ogg
 	
 # Inherit common Shiny configuration.
 $(call inherit-product, vendor/shiny/products/shiny_common.mk)
@@ -51,5 +43,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.media.effect.bgdropper.adj=0.2 \
 	camera.flash_off=0 \
 	ro.setupwizard.network_required=true
-
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage8.mk)

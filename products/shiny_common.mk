@@ -25,10 +25,19 @@ PRODUCT_PACKAGES += \
 	libjni_filtershow_filters \
 	libjni_jpegstream \
 	libjni_tinyplanet \
+	libnativehelper_compat \
 	librsjni \
 	libRSSupport \
 	libwebrtc_audio_coding \
 	libwebrtc_audio_preprocessing
+	
+# Setup sounds configuration
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.config.ringtone=Titania.ogg \
+	ro.config.notification_sound=Tethys.ogg \
+	ro.config.alarm_alert=Oxygen.ogg
+
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage12_48.mk)
 
 # Import common Shiny overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/shiny/overlay/common
@@ -44,24 +53,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     
 # Private system apps
 PRODUCT_COPY_FILES += \
-	$(COMMON_PROPS_ROOT)/priv-app/ConfigUpdater.apk:system/priv-app/ConfigUpdater.apk \
-	$(COMMON_PROPS_ROOT)/priv-app/ConfigUpdater.odex:system/priv-app/ConfigUpdater.odex \
 	$(COMMON_PROPS_ROOT)/priv-app/GoogleBackupTransport.apk:system/priv-app/GoogleBackupTransport.apk \
-	$(COMMON_PROPS_ROOT)/priv-app/GoogleBackupTransport.odex:system/priv-app/GoogleBackupTransport.odex \
 	$(COMMON_PROPS_ROOT)/priv-app/GoogleFeedback.apk:system/priv-app/GoogleFeedback.apk \
-	$(COMMON_PROPS_ROOT)/priv-app/GoogleFeedback.odex:system/priv-app/GoogleFeedback.odex \
 	$(COMMON_PROPS_ROOT)/priv-app/GoogleLoginService.apk:system/priv-app/GoogleLoginService.apk \
-	$(COMMON_PROPS_ROOT)/priv-app/GoogleLoginService.odex:system/priv-app/GoogleLoginService.odex \
 	$(COMMON_PROPS_ROOT)/priv-app/GoogleOneTimeInitializer.apk:system/priv-app/GoogleOneTimeInitializer.apk \
-	$(COMMON_PROPS_ROOT)/priv-app/GoogleOneTimeInitializer.odex:system/priv-app/GoogleOneTimeInitializer.odex \
 	$(COMMON_PROPS_ROOT)/priv-app/GooglePartnerSetup.apk:system/priv-app/GooglePartnerSetup.apk \
-	$(COMMON_PROPS_ROOT)/priv-app/GooglePartnerSetup.odex:system/priv-app/GooglePartnerSetup.odex \
 	$(COMMON_PROPS_ROOT)/priv-app/GoogleServicesFramework.apk:system/priv-app/GoogleServicesFramework.apk \
-	$(COMMON_PROPS_ROOT)/priv-app/GoogleServicesFramework.odex:system/priv-app/GoogleServicesFramework.odex \
 	$(COMMON_PROPS_ROOT)/priv-app/Phonesky.apk:system/priv-app/Phonesky.apk \
 	$(COMMON_PROPS_ROOT)/priv-app/PrebuiltGmsCore.apk:system/priv-app/PrebuiltGmsCore.apk \
 	$(COMMON_PROPS_ROOT)/priv-app/SetupWizard.apk:system/priv-app/SetupWizard.apk \
-	$(COMMON_PROPS_ROOT)/priv-app/SetupWizard.odex:system/priv-app/SetupWizard.odex \
 	$(COMMON_PROPS_ROOT)/priv-app/TagGoogle.apk:system/priv-app/TagGoogle.apk \
 	$(COMMON_PROPS_ROOT)/priv-app/TagGoogle.odex:system/priv-app/TagGoogle.odex \
 	$(COMMON_PROPS_ROOT)/priv-app/talkback.apk:system/priv-app/talkback.apk \
@@ -71,7 +71,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PROPS_ROOT)/app/Books.apk:system/app/Books.apk \
     $(COMMON_PROPS_ROOT)/app/CalendarGoogle.apk:system/app/CalendarGoogle.apk \
-    $(COMMON_PROPS_ROOT)/app/CalendarGoogle.odex:system/app/CalendarGoogle.odex \
     $(COMMON_PROPS_ROOT)/app/Chrome.apk:system/app/Chrome.apk \
     $(COMMON_PROPS_ROOT)/app/CloudPrint2.apk:system/app/CloudPrint2.apk \
     $(COMMON_PROPS_ROOT)/app/DeskClockGoogle.apk:system/app/DeskClockGoogle.apk \
@@ -82,29 +81,19 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PROPS_ROOT)/app/Exchange2Google.apk:system/app/Exchange2Google.apk \
     $(COMMON_PROPS_ROOT)/app/Exchange2Google.odex:system/app/Exchange2Google.odex \
     $(COMMON_PROPS_ROOT)/app/FaceLock.apk:system/app/FaceLock.apk \
-    $(COMMON_PROPS_ROOT)/app/FaceLock.odex:system/app/FaceLock.odex \
     $(COMMON_PROPS_ROOT)/app/GalleryGoogle.apk:system/app/GalleryGoogle.apk \
-    $(COMMON_PROPS_ROOT)/app/GalleryGoogle.odex:system/app/GalleryGoogle.odex \
     $(COMMON_PROPS_ROOT)/app/GenieWidget.apk:system/app/GenieWidget.apk \
-    $(COMMON_PROPS_ROOT)/app/GenieWidget.odex:system/app/GenieWidget.odex \
     $(COMMON_PROPS_ROOT)/app/Gmail2.apk:system/app/Gmail2.apk \
-    $(COMMON_PROPS_ROOT)/app/Gmail2.odex:system/app/Gmail2.odex \
     $(COMMON_PROPS_ROOT)/app/GoogleCamera.apk:system/app/GoogleCamera.apk \
-    $(COMMON_PROPS_ROOT)/app/GoogleCamera.odex:system/app/GoogleCamera.odex \
     $(COMMON_PROPS_ROOT)/app/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
-    $(COMMON_PROPS_ROOT)/app/GoogleContactsSyncAdapter.odex:system/app/GoogleContactsSyncAdapter.odex \
     $(COMMON_PROPS_ROOT)/app/GoogleEars.apk:system/app/GoogleEars.apk \
-    $(COMMON_PROPS_ROOT)/app/GoogleEars.odex:system/app/GoogleEars.odex \
     $(COMMON_PROPS_ROOT)/app/GoogleEarth.apk:system/app/GoogleEarth.apk \
     $(COMMON_PROPS_ROOT)/app/GoogleHome.apk:system/app/GoogleHome.apk \
     $(COMMON_PROPS_ROOT)/app/GoogleTTS.apk:system/app/GoogleTTS.apk \
-    $(COMMON_PROPS_ROOT)/app/GoogleTTS.odex:system/app/GoogleTTS.odex \
     $(COMMON_PROPS_ROOT)/app/Hangouts.apk:system/app/Hangouts.apk \
     $(COMMON_PROPS_ROOT)/app/HPPrintPlugin.apk:system/app/HPPrintPlugin.apk \
     $(COMMON_PROPS_ROOT)/app/Keep.apk:system/app/Keep.apk \
-    $(COMMON_PROPS_ROOT)/app/Keep.odex:system/app/Keep.odex \
     $(COMMON_PROPS_ROOT)/app/LatinImeGoogle.apk:system/app/LatinImeGoogle.apk \
-    $(COMMON_PROPS_ROOT)/app/LatinImeGoogle.odex:system/app/LatinImeGoogle.odex \
     $(COMMON_PROPS_ROOT)/app/Magazines.apk:system/app/Magazines.apk \
     $(COMMON_PROPS_ROOT)/app/Maps.apk:system/app/Maps.apk \
     $(COMMON_PROPS_ROOT)/app/MediaUploader.apk:system/app/MediaUploader.apk \
@@ -136,7 +125,6 @@ PRODUCT_COPY_FILES += \
 # Common framework
 PRODUCT_COPY_FILES += \
 	$(COMMON_PROPS_ROOT)/framework/com.google.android.camera2.jar:system/framework/com.google.android.camera2.jar \
-	$(COMMON_PROPS_ROOT)/framework/com.google.android.camera2.odex:system/framework/com.google.android.camera2.odex \
 	$(COMMON_PROPS_ROOT)/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
     $(COMMON_PROPS_ROOT)/framework/com.google.android.media.effects.jar:system/framework/com.google.android.media.effects.jar \
     $(COMMON_PROPS_ROOT)/framework/com.google.widevine.software.drm.jar:system/framework/com.google.widevine.software.drm.jar
@@ -154,15 +142,14 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PROPS_ROOT)/lib/libfacelock_jni.so:system/lib/libfacelock_jni.so \
     $(COMMON_PROPS_ROOT)/lib/libfilterframework_jni.so:system/lib/libfilterframework_jni.so \
 	$(COMMON_PROPS_ROOT)/lib/libfilterpack_facedetect.so:system/lib/libfilterpack_facedetect.so \
-    $(COMMON_PROPS_ROOT)/lib/libfrsdk.so:system/lib/libfrsdk.so \
     $(COMMON_PROPS_ROOT)/lib/libgames_rtmp_jni.so:system/lib/libgames_rtmp_jni.so \
     $(COMMON_PROPS_ROOT)/lib/libgcam.so:system/lib/libgcam.so \
     $(COMMON_PROPS_ROOT)/lib/libgcam_swig_jni.so:system/lib/libgcam_swig_jni.so \
     $(COMMON_PROPS_ROOT)/lib/libgoogle_recognizer_jni_l.so:system/lib/libgoogle_recognizer_jni_l.so \
     $(COMMON_PROPS_ROOT)/lib/libgtalk_jni.so:system/lib/libgtalk_jni.so \
     $(COMMON_PROPS_ROOT)/lib/libgtalk_stabilize.so:system/lib/libgtalk_stabilize.so \
-    $(COMMON_PROPS_ROOT)/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
     $(COMMON_PROPS_ROOT)/lib/libjni_t13n_shared_engine.so:system/lib/libjni_t13n_shared_engine.so \
+    $(COMMON_PROPS_ROOT)/lib/libjni_unbundled_latinimegoogle.so:system/lib/libjni_unbundled_latinimegoogle.so \
     $(COMMON_PROPS_ROOT)/lib/liblightcycle.so:system/lib/liblightcycle.so \
     $(COMMON_PROPS_ROOT)/lib/liblinearalloc.so:system/lib/liblinearalloc.so \
     $(COMMON_PROPS_ROOT)/lib/libmoviemaker-jni.so:system/lib/libmoviemaker-jni.so \
@@ -182,7 +169,6 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PROPS_ROOT)/lib/librs.image_wrapper.so:system/lib/librs.image_wrapper.so \
     $(COMMON_PROPS_ROOT)/lib/librs.retrolux.so:system/lib/librs.retrolux.so \
     $(COMMON_PROPS_ROOT)/lib/libspeexwrapper.so:system/lib/libspeexwrapper.so \
-    $(COMMON_PROPS_ROOT)/lib/libstlport_shared.so:system/lib/libstlport_shared.so \
     $(COMMON_PROPS_ROOT)/lib/libvcdecoder_jni.so:system/lib/libvcdecoder_jni.so \
     $(COMMON_PROPS_ROOT)/lib/libvideochat_jni.so:system/lib/libvideochat_jni.so \
     $(COMMON_PROPS_ROOT)/lib/libvorbisencoder.so:system/lib/libvorbisencoder.so \

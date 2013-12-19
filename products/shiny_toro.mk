@@ -47,15 +47,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES +=  \
     $(TORO_PROPS_ROOT)/app/VerizonSSO.apk:system/app/VerizonSSO.apk \
 	$(TORO_PROPS_ROOT)/app/VZWAPNLib.apk:system/app/VZWAPNLib.apk \
-	$(TORO_PROPS_ROOT)/app/VZWAPNService.apk:system/app/VZWAPNService.apk \
-	$(TORO_PROPS_ROOT)/priv-app/GoogleDialer.apk:system/priv-app/GoogleDialer.apk \
-	$(TORO_PROPS_ROOT)/priv-app/GoogleDialer.odex:system/priv-app/GoogleDialer.odex
+	$(TORO_PROPS_ROOT)/app/VZWAPNService.apk:system/app/VZWAPNService.apk
 	
 # Add toro proprietary libs
 PRODUCT_COPY_FILES += \
-    $(TORO_PROPS_ROOT)/lib/libmotricity.so:system/lib/libmotricity.so \
-    $(TORO_PROPS_ROOT)/lib/libjni_mosaic.so:system/lib/libjni_mosaic.so
-
+    $(TORO_PROPS_ROOT)/lib/libmotricity.so:system/lib/libmotricity.so
+    
 # Add toro proprietary permissions
 PRODUCT_COPY_FILES += \
 	$(TORO_PROPS_ROOT)/etc/permissions/com.vzw.hardware.ehrpd.xml:system/etc/permissions/com.vzw.hardware.ehrpd.xml \

@@ -8,16 +8,6 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/shiny/overlay/tuna
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.zygote.disable_gl_preload=true
 
-# Setup sounds configuration
-# TODO: We need to decide whether or not all devices are going to carry
-# the same sounds, or stick with their specific ones
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.config.ringtone=Themos.ogg \
-	ro.config.notification_sound=Proxima.ogg \
-	ro.config.alarm_alert=Cesium.ogg
-
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage7.mk)
-
 # Make sure data roaming is turned off by default - leave this device specific for now
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.com.android.dataroaming=false
@@ -27,3 +17,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # coded determination of screen size and selection of the appropriate bootanimation
 PRODUCT_COPY_FILES += \
 	$(TUNA_PROPS_ROOT)/media/bootanimation.zip:system/media/bootanimation.zip
+	
+# Libs common to tuna devices
+PRODUCT_COPY_FILES += \
+	$(TUNA_PROPS_ROOT)/lib/libjni_mosaic.so:system/lib/libjni_mosaic.so
