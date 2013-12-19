@@ -19,7 +19,7 @@ TARGET_PREBUILT_KERNEL := kernel/asus/flo/arch/arm/boot/zImage
 # Setup device specific product configuration
 PRODUCT_NAME := shiny_flo
 PRODUCT_BRAND := google
-PRODUCT_DEVICE := grouper
+PRODUCT_DEVICE := flo
 PRODUCT_MODEL := Nexus 7
 PRODUCT_MANUFACTURER := asus
 
