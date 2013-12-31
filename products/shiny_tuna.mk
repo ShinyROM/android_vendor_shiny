@@ -8,6 +8,8 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/shiny/overlay/tuna
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.zygote.disable_gl_preload=true
 
+TARGET_DISABLE_SURFACEFLINGER_GLES2 := true
+
 # Make sure data roaming is turned off by default - leave this device specific for now
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.com.android.dataroaming=false
