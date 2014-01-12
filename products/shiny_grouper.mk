@@ -30,8 +30,8 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/shiny/overlay/grouper
 # TODO: In the future, this should be done in common.mk with some kind of 
 # coded determination of screen size and selection of the appropriate bootanimation
 PRODUCT_COPY_FILES += \
-	$(GROUPER_PROPS_ROOT)/media/bootanimation.zip:system/media/bootanimation.zip\
-	$(GROUPER_PROPS_ROOT)/app/CameraLauncher.apk:system/app/CameraLauncher.apk\
+	$(GROUPER_PROPS_ROOT)/media/bootanimation.zip:system/media/bootanimation.zip \
+	$(GROUPER_PROPS_ROOT)/app/CameraLauncher.apk:system/app/CameraLauncher.apk
 
 # Override some build.prop settings for grouper
 PRODUCT_BUILD_PROP_OVERRIDES += \
