@@ -108,7 +108,7 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PROPS_ROOT)/app/YouTube.apk:system/app/YouTube.apk
     
 # Copy Google Wallet if we're building a device that supports it
-ifneq (,$(filter $(TARGET_PRODUCT),shiny_toro shiny_grouper shiny_flo))
+ifneq (,$(filter $(TARGET_PRODUCT),shiny_toro shiny_grouper shiny_flo shiny_maguro))
 	PRODUCT_COPY_FILES += \
 		$(COMMON_PROPS_ROOT)/priv-app/Wallet.apk:system/priv-app/Wallet.apk
 endif
