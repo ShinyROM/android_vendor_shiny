@@ -35,9 +35,9 @@ PRODUCT_COPY_FILES += \
 # Override some build.prop settings for grouper
 PRODUCT_BUILD_PROP_OVERRIDES += \
 	PRODUCT_NAME=razor \
-	BUILD_NUMBER=937116 \
-	BUILD_FINGERPRINT="google/razor/flo:4.4.2/KOT49H/937116:user/release-keys" \
-	PRIVATE_BUILD_DESC="razor-user 4.4.2 KOT49H 937116 release-keys"
+	BUILD_NUMBER=1158763 \
+	BUILD_FINGERPRINT="google/razor/flo:4.4.3/KTU84M/1158763:user/release-keys" \
+	PRIVATE_BUILD_DESC="razor-user 4.4.3 KTU84M 1158763 release-keys"
 	
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.media.effect.bgdropper.adj=0.2 \

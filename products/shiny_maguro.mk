@@ -29,9 +29,9 @@ PRODUCT_MANUFACTURER := samsung
 # Override some build.prop settings for maguro
 PRODUCT_BUILD_PROP_OVERRIDES += \
 	PRODUCT_NAME=takju \
-	BUILD_NUMBER=937116 \
-	BUILD_FINGERPRINT="google/takju/maguro:4.4.2/KOT49H/937116:user/release-keys" \
-	PRIVATE_BUILD_DESC="takju-user 4.4.2 KOT49H 937116 release-keys"
+	BUILD_NUMBER=1158763 \
+	BUILD_FINGERPRINT="google/takju/maguro:4.4.3/KTU84M/1158763:user/release-keys" \
+	PRIVATE_BUILD_DESC="takju-user 4.4.3 KTU84M 1158763 release-keys"
 	
 PRODUCT_PROPERTY_OVERRIDES += \
     camera.flash_off=0
