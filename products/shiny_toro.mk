@@ -45,6 +45,7 @@ PRODUCT_PACKAGES += \
 
 # Add toro proprietary apps
 PRODUCT_COPY_FILES +=  \
+    $(TORO_PROPS_ROOT)/app/CellBroadcastReceiver.apk:system/app/CellBroadcastReceiver.apk \
     $(TORO_PROPS_ROOT)/app/VerizonSSO.apk:system/app/VerizonSSO.apk \
 	$(TORO_PROPS_ROOT)/app/VZWAPNLib.apk:system/app/VZWAPNLib.apk \
 	$(TORO_PROPS_ROOT)/app/VZWAPNService.apk:system/app/VZWAPNService.apk
